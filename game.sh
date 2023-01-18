@@ -26,7 +26,7 @@ for i in {1..10}; do
     fi
     if [ "${r[$((x))-1]}" -eq "$n" ]; then
             echo "Great"
-   "_= $(( p=p+1 ))"
+   "_=$((p=p+1))"
         else :
             c=1
             break
