@@ -16,7 +16,7 @@ while [ "$c" -eq 0 ];
         x=11; r=("$(shuf -i 0-9 -n 10)")
         echo "${r[*]} " 
 for i in {1..10}; do
-            a[$i]=$i
+            a[i]=$i
         done
         echo "${a[*]} "
         read -rt 5 -p "Enter the index of your number : " x
@@ -26,7 +26,7 @@ for i in {1..10}; do
     fi
     if [ "${r[$((x))-1]}" -eq "$n" ]; then
             echo "Great"
-    (( p=p+1 ))
+   "_=$(( p=p+1 ))"
         else :
             c=1
             break
