@@ -11,11 +11,12 @@ while [ "$ch" -ne 3 ]; do
     if [ "$ch" -eq 1 ]; then
     x=0 ;c=0 ;p=0
     read -rp "Enter any number between 0 and 9 : " n
-    while [ "$c" -eq 0 ];
+while [ "$c" -eq 0 ];
     do
         x=11; r=("$(shuf -i 0-9 -n 10)")
-        echo "${r[*]} "; for i in {1..10}; do
-            #a[$i]=$i
+        echo "${r[*]} " 
+for i in {1..10}; do
+            a[$i]=$i
         done
         echo "${a[*]} "
         read -rt 5 -p "Enter the index of your number : " x
@@ -23,10 +24,10 @@ while [ "$ch" -ne 3 ]; do
     c=1
     break
     fi
-if [ "${r[$((x))-1]}" -eq "$n" ]; then
+    if [ "${r[$((x))-1]}" -eq "$n" ]; then
             echo "Great"
     (( p=p+1 ))
-        else
+        else :
             c=1
             break
         fi
@@ -40,4 +41,4 @@ if [ "$c" -eq 1 ]; then
             echo -e "\nGAME OVER\n"
             echo "You scored $p points"
 fi
-        done
+    done
